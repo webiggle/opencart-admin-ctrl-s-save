@@ -13,14 +13,13 @@
         <!-- Webiggle Store OC Module - Ctrl+s Admin Shortcut to save - store.webiggle.com starts-->
         <script>
             document.addEventListener("keydown", function(e) {
-            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-                e.preventDefault();
-                var formid = $('.page-header').find('button[type=submit]').attr('form');
-                if (jQuery.type(formid) == 'string')
-                $('#' + formid).submit();
-                else
-                console.log('Nothing to Save!');
-            }
+              if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                  e.preventDefault();
+                  var formid = $('.page-header').find('button[type=submit]').attr('form');
+                  if (jQuery.type(formid) == 'string'){
+                    $('#' + formid).submit();
+                  }
+              }
             }, false);
         </script>
         <!-- Webiggle Store OC Module - Ctrl+s Admin Shortcut to save - store.webiggle.com ends-->
