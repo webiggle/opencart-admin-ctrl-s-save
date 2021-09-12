@@ -6,7 +6,7 @@
   <author>Webiggle Team</author>
   <link>https://store.webiggle.com/</link>
 
-  <file path="admin/view/template/common/footer.twig">
+  <file path="admin/view/template/common/footer.tpl">
     <operation>
       <search><![CDATA[<footer id="footer">]]></search>
       <add position="before"><![CDATA[
