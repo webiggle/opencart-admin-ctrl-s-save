@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>Admin Ctrl+S Save</name>
+  <code>admin_ctrl_s_save</code>
+  <version>0.1.0</version>
+  <author>Webiggle Team</author>
+  <link>https://store.webiggle.com/</link>
+
+  <file path="admin/view/template/common/footer.tpl">
+    <operation>
+      <search><![CDATA[<footer id="footer">]]></search>
+      <add position="before"><![CDATA[
+        <!-- Webiggle Store OC Module - Ctrl+s Admin Shortcut to save - store.webiggle.com starts-->
+        <script>
+            document.addEventListener("keydown", function(e) {
+            if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+                e.preventDefault();
+                var formid = $('.page-header').find('button[type=submit]').attr('form');
+                if (jQuery.type(formid) == 'string')
+                $('#' + formid).submit();
+                else
+                console.log('Nothing to Save!');
+            }
+            }, false);
+        </script>
+        <!-- Webiggle Store OC Module - Ctrl+s Admin Shortcut to save - store.webiggle.com ends-->
+        ]]></add>
+    </operation>
+  </file>  
+
+</modification>
